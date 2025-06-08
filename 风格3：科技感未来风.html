@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exclusive VIP Offer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #000;
+      color: #fff;
+    }
+    .hero-image {
+      width: 200px;
+      margin: 20px auto;
+      border-radius: 50%;
+      border: 3px solid gold;
+    }
+    .button {
+      background: gold;
+      color: #000;
+      padding: 18px 40px;
+      border-radius: 0;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .countdown {
+      font-size: 24px;
+      color: gold;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+  <img src="http://a.impactradius-go.com/display-ad/4662-2995357" alt="VIP Badge" class="hero-image">
+  <h1>🔑 YOUR EXCLUSIVE ACCESS</h1>
+  <p>This special offer expires in <span id="countdown">5</span> seconds</p>
+  
+  <div class="countdown" id="countdown"></div>
+  <a href="联盟链接" class="button">Claim Your Privilege</a>
+
+  <script>
+    let time = 5;
+    const countdownEl = document.getElementById("countdown");
+    const timer = setInterval(() => {
+      time--;
+      countdownEl.textContent = time;
+      if (time <= 0) {
+        clearInterval(timer);
+        window.location.href = "联盟链接";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
